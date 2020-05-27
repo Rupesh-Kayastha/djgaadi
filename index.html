@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+  <link rel="apple-touch-startup-image" href="images/apple-touch-startup-image-640x920.png">
+  <title>djgaadi</title>
+  <link rel="stylesheet" href="css/framework7.css">
+  <link rel="stylesheet" href="style.css">
+  <link type="text/css" rel="stylesheet" href="css/swipebox.css" />
+  <link type="text/css" rel="stylesheet" href="css/animations.css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,900" rel="stylesheet">
+</head>
+<style>
+  /* A bit of demo styles */
+  .demo-swiper .swiper-slide {
+    font-size: 25px;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    color: #000;
+  }
+  .demo-swiper .swiper-slide {
+    box-sizing: border-box;
+    border-radius: 2px;
+    background: #fff;
+  }
+  .demo-swiper {
+    margin: 50px 0 35px;
+    font-size: 18px;
+    height: 120px;
+  }
+  .demo-swiper.demo-swiper-auto .swiper-slide {
+    width: 85%;
+  }
+  .demo-swiper.demo-swiper-auto .swiper-slide:nth-child(2n) {
+    width: 85%;
+  }
+  .demo-swiper.demo-swiper-auto .swiper-slide:nth-child(3n) {
+    width: 85%;
+  }
+  .demo-swiper.demo-swiper-auto .swiper-slide img {
+    width: 100%;
+  }
+</style>
+<body id="mobile_wrap">
+  <div class="statusbar-overlay"></div>
+  <div class="panel-overlay"></div>
+  <div class="panel panel-left panel-reveal">
+    <div class="view view-subnav">
+      <div class="pages">
+        <div data-page="panel-leftmenu" class="page pagepanel">
+          <div class="page-content">
+            <nav class="main_nav_underline">
+              <ul>
+                <li><a href="index.html" class="close-panel" data-view=".view-main"><img src="images/icons/white/home.png" alt="" title="" /><span>Home</span></a></li>
+                <li><a href="about.html" class="close-panel" data-view=".view-main"><img src="images/icons/white/mobile.png" alt="" title="" /><span>Abouts</span></a></li>
+                <li><a href="#" data-popup=".popup-login" class="open-popup close-panel"><img src="images/icons/white/lock.png" alt="" title="" /><span>Login</span></a></li>
+
+
+                <li><a href="contact.html" class="close-panel" data-view=".view-main"><img src="images/icons/white/contact.png" alt="" title="" /><span>Contact</span></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="views">
+    <div class="view view-main">
+      <div class="pages">
+        <div data-page="index" class="page homepage">
+          <div class="page-content">
+            <div class="navbarpages">
+              <div class="navbar_left">
+                <div class="logo_text"><a href="index.html"> <img src="images/logo.png" alt="" title="" /> </a></div>
+              </div>
+              <div class="navbar_right navbar_right_menu"> <a href="#" data-panel="left" class="open-panel"><img src="images/icons/white/menu.png" alt="" title="" /></a> </div>
+            </div>
+            <!-- Slider -->
+
+            <div data-pagination=".swiper-pagination" data-space-between="10" data-slides-per-view="auto" data-centered-slides="true" class="swiper-container swiper-init demo-swiper demo-swiper-auto">
+              <div class="swiper-pagination"></div>
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">  <img src="images/slide3.jpg"></div>
+                <div class="swiper-slide">   <img src="images/slide1.jpg"> </div>
+                <div class="swiper-slide">  <img src="images/slide2.jpg"> </div>
+
+              </div>
+            </div>
+
+
+            <div class="card">
+              <div class="card-content card-content-padding">	
+                <div class="contactform">
+                  <form class="" id="CustomForm" method="post" action="#">  
+                    <div class="form_row">
+                      <label>STARTING LOCATION </label>
+                      <input type="text" name="name" value="" class="form_input" />
+                    </div>
+
+                    <div class="form_row">
+                      <label>DROP OFF LOCATION </label>
+                      <input type="text" name="name" value="" class="form_input" />
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-content card-content-padding">	
+                <div class="contactform">
+                  <form class="" id="CustomForm" method="post" action="#">
+                    <div class="form_row">
+                      <label>DEPARTURE DATE</label>
+                      <input type="text" name="email" value="" class="form_input required" readonly="readonly" id="calendar-input" />
+                    </div>
+
+
+
+                    <a href="blog.html" class="close-panel" data-view=".view-main">
+                      <input type="submit" name="submit" class="form_submit" id="submit" value="Send" /> 
+                    </a>
+                  </form>
+                </div>
+              </div>
+            </div>  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- edit -->
+  <div class="popup popup-edit">
+    <div class="content-block">
+      <h4>Modify </h4>
+
+      <div class="card">
+        <div class="card-content card-content-padding">	
+          <div class="contactform">
+            <form class="" id="CustomForm" method="post" action="#">  
+              <div class="form_row">
+                <label>STARTING LOCATION </label>
+                <input type="text" name="name" value="" class="form_input" />
+              </div>
+
+              <div class="form_row">
+                <label>DROP OFF LOCATION </label>
+                <input type="text" name="name" value="" class="form_input" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-content card-content-padding">	
+          <div class="contactform">
+            <form class="" id="CustomForm" method="post" action="#">
+              <div class="form_row">
+                <label>DEPARTURE DATE</label>
+                <input type="text" name="email" value="" class="form_input required" readonly="readonly" id="calendar-input" />
+              </div>
+
+
+
+              <a href="blog.html" class="close-panel" data-view=".view-main">
+                <input type="submit" name="submit" class="form_submit" id="submit" value="Send" /> 
+              </a>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="close_popup_button"> <a href="#" class="close-popup"><img src="images/icons/black/menu_close.png" alt="" title="" /></a> </div>
+    </div>
+  </div>
+  <!-- Amenites Popup -->
+
+  <div class="popup popup-journey">
+    <div class="content-block">
+      <h4>Journey Details </h4>
+
+      <div class="rb_directionn2">
+       <div class="rb_directionn1">
+        <div class="tb_align">
+         <span class="tb_fromnew ng-binding">
+           BHUBANESWAR<br><span style="color:#333;" class="ng-binding">(10:20 PM)</span></span>
+           <span class="tb_arrownew"><img src="https://www.djgaadi.in/assets/images/arrow-right.png"></span>
+           <span class="tb_tonew ng-binding">BARIPADA<br><span style="color:#333;" class="ng-binding">(04:30 AM)</span></span>                        </div>
+           <p style="text-align: center;">Duration:6Hour 10Min</p>
+           <div class="tb_align">
+             <span class="tb_from2"></span>
+             <span class="tb_arrow2 ng-binding">12-Dec-2019 </span>
+             <span class="tb_to2"></span>
+             <br>
+             <b>Boarding Point </b>:BARAMUNDA BUS STAND(10:20 PM) <br>
+             <b>Dropping Point </b>:BARIPADA BUS STAND(04:30 AM)
+             <br>
+           </div>
+          <div class="rb_directionn1 topbot">
+             <img src="https://www.djgaadi.in/assets/images/buswhite.png">
+            <div class="tb_Corporation ng-binding">
+              INDRANI, 
+              1/2 AC SLEEPER                           
+            </div>
+          </div>
+          <div class="tb_align_lft">
+            <div class="tb_Corporation lefft"> 
+              Seat no(s) : <span style="color:#333;" class="ng-binding">4,5,6</span>                           
+            </div>
+          </div>
+        </div>
+                         </div>
+
+
+
+
+      <div class="close_popup_button"> <a href="#" class="close-popup"><img src="images/icons/black/menu_close.png" alt="" title="" /></a> </div>
+    </div>
+  </div>
+
+
+  <div class="popup popup-amenites">
+    <div class="content-block">
+      <h4>AJAYA 07-12-2019</h4>
+      <ul class="responsive_table">
+        <li class="table_row">
+          <div class="table_section">AMENTIES</div>
+        </li>
+        <li class="table_row">
+          <div class="table_section">EMERGENCY EXIT </div>
+        </li>
+        <li class="table_row">
+          <div class="table_section">FIRE EXTINGUISHER </div>
+        </li>
+        <li class="table_row">
+          <div class="table_section">HAMMER (TO BREAK GLASS) </div>
+        </li>
+      </ul>
+      <div class="close_popup_button"> <a href="#" class="close-popup"><img src="images/icons/black/menu_close.png" alt="" title="" /></a> </div>
+    </div>
+  </div>
+
+
+  <div class="popup popup-boardingpoint">
+    <div class="content-block">
+      <h4>AJAYA 07-12-2019</h4>
+
+    <ul class="responsive_table">
+       <li class="table_row">
+        <div class="table_section_14">BOARD POINT	</div>
+        <div class="table_section_14">BOARD TIME	</div>
+        <div class="table_section_14">DROP POINT	</div> 
+        <div class="table_section_14">DROP TIME</div> 
+      </li>
+      <li class="table_row">
+        <div class="table_section_14">Bhn</div>
+        <div class="table_section_14">06:00 AM</div>
+        <div class="table_section_14">BBSR</div> 
+        <div class="table_section_14">11:00 AM</div> 
+      </li>
+    </ul>
+
+    
+    <div class="close_popup_button"> <a href="#" class="close-popup"><img src="images/icons/black/menu_close.png" alt="" title="" /></a> </div>
+  </div>
+</div>
+<div class="popup popup-recess">
+  <div class="content-block">
+    <h4>recess</h4>
+    <ul class="responsive_table">
+     <li class="table_row">
+      <div class="table_section_14">TITLE	</div>
+      <div class="table_section_14">POINT	</div>
+      <div class="table_section_14">ARRIVE  	</div> 
+      <div class="table_section_14">INTERVAL</div> 
+    </li>
+    <li class="table_row">
+      <div class="table_section_14">TOILET</div>
+      <div class="table_section_14">MACHHIPADA</div>
+      <div class="table_section_14">08:25 AM</div> 
+      <div class="table_section_14">5 MINUTE</div> 
+    </li>
+  </ul>
+  <div class="close_popup_button"> <a href="#" class="close-popup"><img src="images/icons/black/menu_close.png" alt="" title="" /></a> </div>
+</div>
+</div>
+<div class="popup popup-cancel">
+  <div class="content-block">
+    <h4>cancel</h4>
+    <ul class="responsive_table">
+      <li class="table_row">
+        <div class="table_section">CANCELLATION TIME	</div>
+        <div class="table_section">CANCELLATION FEE	</div>
+      </li>
+      <li class="table_row">
+        <div class="table_section">BEFORE 07:00:00 HR	</div>
+        <div class="table_section">0 %	</div>
+      </li>
+      <li class="table_row">
+        <div class="table_section" style="width:100%; color:#FF0000;"> * Partial cancellation not allowed	</div>
+      </li>
+    </ul>
+    <div class="close_popup_button"> <a href="#" class="close-popup"><img src="images/icons/black/menu_close.png" alt="" title="" /></a> </div>
+  </div>
+</div>
+<div class="popup popup-gallery">
+  <div class="content-block">
+    <h4>Gallery </h4>
+
+    <div class="close_popup_button"> <a href="#" class="close-popup"><img src="images/icons/black/menu_close.png" alt="" title="" /></a> </div>
+  </div>
+</div>
+<!-- Login Popup -->
+<div class="popup popup-login">
+  <div class="content-block">
+    <h4>LOGIN WITH</h4>
+
+    <div class="ac-lft-list">
+      <div class="buttons-row">
+        <a href="#tab3" class="tab-link active button">Mobile   </a>
+        <a href="#tab4" class="tab-link button">Email </a>
+      </div>
+
+      <div class="tabs-animated-wrap">
+        <div class="tabs">
+          <div id="tab3" class="tab active">
+           <div class="seatt">
+
+
+            <div class="loginform">
+              <form id="LoginForm" method="post">
+                <input type="text" name="Username" value="" class="form_input required" placeholder="mobile" />
+                <input type="password" name="Password" value="" class="form_input required" placeholder="Password" />
+
+                <input type="submit" name="submit" class="form_submit" id="submitlogin" value="SIGN IN" />
+              </form>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+        <div id="tab4" class="tab">
+         <div class="seatt">
+
+
+           <div class="loginform">
+            <form id="LoginForm" method="post">
+              <input type="text" id="username" class="form_input required" placeholder="Email" />
+              <input type="password" id="password" class="form_input required" placeholder="Password" />
+              <div class="forgot_pass"><a href="#" data-popup=".popup-forgot" class="open-popup">Forgot Password?</a></div>
+              <input type="button" class="form_submit" onClick="Login();" value="SIGN IN" />
+            </form>
+            <div class="signup_bottom">
+              <p>Don't have an account?</p>
+              <a href="#" data-popup=".popup-signup" class="open-popup">SIGN UP</a> </div>
+            </div>
+
+          </div>
+
+
+        </div> 
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="close_popup_button"> <a href="#" class="close-popup"><img src="images/icons/black/menu_close.png" alt="" title="" /></a> </div>
+</div>
+</div>
+<!-- Register Popup -->
+<div class="popup popup-signup">
+  <div class="content-block">
+    <h4>REGISTER</h4>
+    <div class="loginform">
+      <form id="RegisterForm" method="post">
+        <input type="text" name="Username" value="" class="form_input required" placeholder="Mobile" />
+        <input type="text" name="Email" value="" class="form_input required" placeholder="Email" />
+        <input type="password" name="Password" value="" class="form_input required" placeholder="Password" />
+        <input type="submit" name="submit" class="form_submit" id="submitregister" value="SIGN UP" />
+      </form>
+      <h5>  OR REGISTER WITH</h5>
+      <div class="signup_social"> <a href="#" class="signup_facebook external">FACEBOOK</a>   </div>
+    </div>
+    <div class="close_popup_button"> <a href="#" class="close-popup"><img src="images/icons/black/menu_close.png" alt="" title="" /></a> </div>
+  </div>
+</div>
+<!-- Forgot Password Popup -->
+<div class="popup popup-forgot">
+  <div class="content-block">
+    <h4>FORGOT PASSWORD</h4>
+    <div class="loginform">
+      <form id="ForgotForm" method="post">
+        <input type="text" name="Email" value="" class="form_input required" placeholder="email" />
+        <input type="submit" name="submit" class="form_submit" id="submitforgot" value="RESEND PASSWORD" />
+      </form>
+      <div class="signup_bottom">
+        <p>Check your email and follow the instructions to reset your password.</p>
+      </div>
+    </div>
+    <div class="close_popup_button"> <a href="#" class="close-popup"><img src="images/icons/black/menu_close.png" alt="" title="" /></a> </div>
+  </div>
+</div>
+<!-- Social Icons Popup -->
+<div class="popup popup-social">
+  <div class="content-block">
+    <h4>Social Share</h4>
+    <p>Share icons solution that allows you share and increase your social popularity.</p>
+    <ul class="social_share">
+      <li><a href="http://twitter.com/" class="external"><img src="images/icons/black/twitter.png" alt="" title="" /><span>TWITTER</span></a></li>
+      <li><a href="http://www.facebook.com/" class="external"><img src="images/icons/black/facebook.png" alt="" title="" /><span>FACEBOOK</span></a></li>
+      <li><a href="http://plus.google.com/" class="external"><img src="images/icons/black/gplus.png" alt="" title="" /><span>GOOGLE</span></a></li>
+      <li><a href="http://www.dribbble.com/" class="external"><img src="images/icons/black/dribbble.png" alt="" title="" /><span>DRIBBBLE</span></a></li>
+      <li><a href="http://www.linkedin.com/" class="external"><img src="images/icons/black/linkedin.png" alt="" title="" /><span>LINKEDIN</span></a></li>
+      <li><a href="http://www.pinterest.com/" class="external"><img src="images/icons/black/pinterest.png" alt="" title="" /><span>PINTEREST</span></a></li>
+    </ul>
+    <div class="close_popup_button"><a href="#" class="close-popup"><img src="images/icons/black/menu_close.png" alt="" title="" /></a></div>
+  </div>
+</div>
+<!-- <script src="js/jquery-1.10.1.min.js"></script> -->
+<!-- <script src="js/jquery.validate.min.js" ></script> -->
+<script src="js/framework7.js"></script>
+<script src="js/jquery.swipebox.js"></script>
+<script src="js/jquery.fitvids.js"></script>
+<script src="js/email.js"></script>
+<script src="js/jquery-2.2.3.min.js"></script>
+<script src="js/audio.min.js"></script>
+<script src="js/my-app.js"></script>
+<script src="js/urlval.js"></script>
+</body>
+</html>
